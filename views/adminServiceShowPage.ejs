@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Services</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/CSS/adminMain.css">
+    <link rel="stylesheet" href="/CSS/adminServiceShowPage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <%- include("./includes/adminNavBar.ejs") %>
+
+        <div>
+            <%- include("./includes/flash.ejs") %>
+
+                <div class="admin-container">
+                    <h1>Service Details</h1>
+
+                    <% if(!service) { %>
+                        <p class="no-service">Service not found.</p>
+                        <% } else { %>
+                            <div class="service-show-card">
+                                <img src="<%= service.image %>" alt="<%= service.name %>" class="service-img">
+
+                                <div class="service-info">
+                                    <h2 class="service-title">
+                                        <%= service.name %>
+                                    </h2>
+                                    <p class="service-description">
+                                        <%= service.description %>
+                                    </p>
+                                    <p class="service-meta">
+                                        <i class="fas fa-user"></i> Created by: <%=user %>
+                                    </p>
+
+                                    <div class="service-actions">
+                                        <form action="/admin/service/<%= service._id %>/delete?_method=DELETE"
+                                            method="POST">
+                                            <button type="submit" class="btn btn-delete">Delete Service</button>
+                                        </form>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <% } %>
+                </div>
+        </div>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

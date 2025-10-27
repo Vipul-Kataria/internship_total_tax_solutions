@@ -1,0 +1,40 @@
+<% layout("./layout/boilerplate.ejs") %>
+    <%- include("./includes/flash.ejs") %>
+
+        <div class="login-container">
+            <div class="login-box">
+                <div class="login-header">
+                    <img src="/tts.jpg"
+                        alt="Logo">
+                    <h2>Admin Login</h2>
+                </div>
+
+                <form action="/admin/login" method="POST" class="needs-validation" novalidate>
+                    <div class="input-group mb-3">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" name="username" class="form-control" placeholder="Username"
+                            id="validationUsername" required>
+                        <div class="invalid-feedback">
+                            Please enter your username.
+                        </div>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" name="password" class="form-control" placeholder="Password"
+                            id="validationPassword" required>
+                        <div class="invalid-feedback">
+                            Please enter your password.
+                        </div>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary w-100" type="submit">Login</button>
+                </form>
+            </div>
+        </div>

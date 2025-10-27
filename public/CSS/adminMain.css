@@ -1,0 +1,175 @@
+/* ====================== Sidebar ====================== */
+
+body{
+    font-family: 'Poppins', sans-serif !important;
+} 
+
+.alert{
+    height: 4rem;
+}
+
+
+
+.admin-sidebar {
+    font-family: 'Poppins', sans-serif !important;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 260px;
+    background-color: #1E3D59;
+    color: #FFF;
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem;
+    box-shadow: 5px 0 15px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.admin-logo {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.admin-logo img {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    border: 2px solid #E2C044;
+    margin-bottom: 0.5rem;
+}
+
+.admin-logo h2 {
+    font-size: 1.4rem;
+    color: #E2C044;
+}
+
+.admin-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.admin-menu li {
+    margin-bottom: 1rem;
+}
+
+.admin-menu li a {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    color: #FFF;
+    font-weight: 500;
+    padding: 0.8rem 1.2rem;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.admin-menu li a:hover{
+    background-color: #E2C044;
+    color: #1E3D59;
+    transform: none;
+}
+
+.admin-menu i {
+    font-size: 1.1rem;
+}
+
+/* ====================== Main Content ====================== */
+.admin-container {
+    font-family: 'Poppins', sans-serif !important;
+    margin-left: 250px; /* match sidebar width */
+    padding: 2rem 3rem; /* content padding */
+    min-height: 100vh;
+    background-color: #FAF9F6;
+    color: #1E3D59;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 0; /* remove any gap */
+}
+
+
+.admin-container h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+/* Dashboard Cards Grid */
+.admin-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+}
+
+/* Individual Cards */
+.admin-card {
+    background-color: #FFF;
+    padding: 2rem;
+    border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+}
+
+.admin-card h2 {
+    margin-bottom: 1rem;
+    color: #1E3D59;
+}
+
+.admin-card p {
+    flex-grow: 1;
+    color: #555;
+    line-height: 1.6;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+}
+
+.admin-card button {
+    align-self: flex-start;
+    padding: 0.7rem 1.5rem;
+    background-color: #E2C044;
+    color: #1E3D59;
+    font-weight: 600;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.admin-card button:hover {
+    background-color: #1E3D59;
+    color: #FFF;
+    transform: translateY(-2px);
+}
+
+.admin-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+/* Optional: colored top borders for cards */
+.services-card { border-top: 5px solid #E2C044; }
+.enquiries-card { border-top: 5px solid #1E3D59; }
+.clients-card { border-top: 5px solid #F0A500; }
+.reports-card { border-top: 5px solid #C4452F; }
+.lawyers-card { border-top: 5px solid #2E517A; }
+.settings-card { border-top: 5px solid #7B3F00; }
+
+/* ====================== Responsive ====================== */
+@media (max-width: 768px) {
+    .admin-container {
+        margin-left: 220px;
+        padding: 2rem;
+    }
+    .admin-grid {
+        gap: 1.5rem;
+    }
+    .admin-sidebar {
+        width: 200px;
+        padding-top: 1.5rem;
+    }
+}

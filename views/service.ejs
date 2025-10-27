@@ -1,0 +1,30 @@
+<% layout("./layout/boilerplate.ejs") %>
+<div class="title-service-box">
+        <br><br><h1>Our Services</h1>
+        <p>Strategic counsel delivered with precision.<br> Explore our key practice areas where experience, discretion, and results come together.</p>
+    </div>
+    <div class="admin-grid col-8 offset-2">
+        <% if (allService.length===0) { %>
+            <p>No services created yet.</p>
+            <% } else { %>
+                <% allService.forEach(allService=> { %>
+                    <div class="admin-card services-card col-3">
+                        <img src=<%= allService.image %> class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="titleCard">
+                                <%= allService.name %>
+                            </h5>
+                            <h6 class="titleCard">
+                                <%=allService.slug%>
+                            </h6>
+                            
+                            <p class="titleCard">
+                                 <%= allService.description%>
+                            </p>
+                            
+                        </div>
+                    </div>
+                    <% }) %>
+                        <% } %>
+
+    </div>

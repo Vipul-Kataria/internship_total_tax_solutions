@@ -1,0 +1,40 @@
+<% layout("./layout/boilerplate.ejs") %>
+
+    <div class="login-container">
+        <div class="login-box">
+            <div class="login-header">
+                <img src="/tts.jpg"
+                    alt="Logo">
+                <h2>Admin Sign-Up</h2>
+            </div>
+
+            <form action="/admin/signup" method="POST" class="needs-validation" novalidate>
+                <div class="input-group">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" name="username" placeholder="Username" class="form-control" required>
+                    <div class="valid-feedback">Username looks good!</div>
+                    <div class="invalid-feedback">Invalid Username</div>
+                </div>
+
+
+                <div class="input-group">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" name="email" placeholder="Email" class="form-control" required>
+                    <div class="valid-feedback">Email looks good!</div>
+                    <div class="invalid-feedback">Invalid Email</div>
+                </div>
+
+
+                <div class="input-group">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" name="password" placeholder="Password" class="form-control" required>
+                    <div class="valid-feedback">Password looks good!</div>
+                    <div class="invalid-feedback">Invalid Password</div>
+                </div>
+
+
+
+                <button type="submit">Signup</button>
+            </form>
+        </div>
+    </div>

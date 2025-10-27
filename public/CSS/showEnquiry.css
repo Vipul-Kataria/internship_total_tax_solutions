@@ -1,0 +1,66 @@
+.enquiry-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.enquiry-card {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.enquiry-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.enquiry-card h5 {
+    margin-bottom: 0.5rem;
+    color: #ffbf00; /* accent color */
+}
+
+.enquiry-card p {
+    margin: 0.25rem 0;
+    color: #333;
+}
+
+.card-buttons {
+    margin-top: 1rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.mark-done-btn {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 0.8rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.mark-done-btn.done {
+    background-color: #2E7D32;
+}
+
+.mark-done-btn:hover {
+    opacity: 0.9;
+}
+
+.delete-btn {
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 0.8rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.delete-btn:hover {
+    opacity: 0.9;
+}

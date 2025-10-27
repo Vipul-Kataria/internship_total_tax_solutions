@@ -1,0 +1,121 @@
+/* ====================== Single Service Show ====================== */
+.service-show-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #FFF;
+    border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    overflow: hidden;
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-show-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.service-img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-bottom: 5px solid #E2C044; /* gold highlight */
+}
+
+.service-info {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.service-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #1E3D59; /* navy color */
+}
+
+.service-description {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.service-meta {
+    font-size: 0.95rem;
+    color: #777;
+    margin-top: 0.5rem;
+}
+
+.service-actions {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn-edit, .btn-delete, .btn-back {
+    padding: 0.7rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-edit {
+    background-color: #E2C044;
+    color: #1E3D59;
+}
+
+.btn-edit:hover {
+    background-color: #1E3D59;
+    color: #FFF;
+    transform: translateY(-2px);
+}
+
+.btn-delete {
+    background-color: #C4452F;
+    color: #FFF;
+}
+
+.btn-delete:hover {
+    background-color: #9B2D1F;
+    transform: translateY(-2px);
+}
+
+.btn-back {
+    background-color: #1E3D59;
+    color: #FFF;
+}
+
+.btn-back:hover {
+    background-color: #16314a;
+    transform: translateY(-2px);
+}
+
+/* No service message */
+.no-service {
+    text-align: center;
+    color: #777;
+    font-size: 1.2rem;
+    margin-top: 3rem;
+}
+
+/* Responsive: side by side on desktop */
+@media (min-width: 768px) {
+    .service-show-card {
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    .service-img {
+        width: 40%;
+        height: auto;
+        border-bottom: none;
+        border-right: 5px solid #E2C044;
+    }
+
+    .service-info {
+        width: 60%;
+    }
+}

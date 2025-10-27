@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/CSS/adminMain.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+</head>
+
+<body>
+  <!-- Sidebar -->
+  <%- include("./includes/adminNavBar.ejs") %>
+
+  <!-- Main Dashboard Content -->
+  <div class="admin-container">
+    <%- include("./includes/flash.ejs") %>
+
+    <h1>Admin Dashboard</h1>
+
+    <div class="admin-grid">
+      <div class="admin-card services-card">
+        <h2>Services</h2>
+        <p>Manage all your law services, add, edit, or remove.</p>
+        <a href="/admin/service"><button >Go</button></a>
+      </div>
+
+      <div class="admin-card enquiries-card">
+        <h2>Enquiries</h2>
+        <p>View all client enquiries and respond to them.</p>
+        <button>Go</button>
+      </div>
+
+      <div class="admin-card clients-card">
+        <h2>Clients</h2>
+        <p>Manage client information and profiles.</p>
+        <button>Go</button>
+      </div>
+
+      <div class="admin-card reports-card">
+        <h2>Reports</h2>
+        <p>Generate and download reports of activities.</p>
+        <button>Go</button>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+  
