@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const app = express();
 const PORT = 3000;
@@ -17,8 +18,10 @@ const Enquiry=require("./models/enquiry")
 
 
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://127.0.0.1:27017/total_tax_solution')
-  .then(() => console.log('Connected!'));
+mongoose.connect(process.env.MONGO_URL)
+  .then(() => console.log('Connected to MongoDB!'))
+  .catch((err) => console.log('MongoDB connection error:', err));
+
 
 const path = require("path");
 app.set("view engine", "ejs");
@@ -30,7 +33,7 @@ app.use(express.json());
 //SESSIONS CREATED
 const session = require("express-session");
 app.use(session({
-  secret: "mysupersecretcode",
+  secret: process.env.SESSION_SECRET,
   resave: false,
   saveUninitialized: true,
   cookie: {
